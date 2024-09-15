@@ -9,7 +9,9 @@
 
 #include <wx/artprov.h>
 #include <wx/xrc/xmlres.h>
-#include <wx/intl.h>
+class wxMaskedEditText;
+
+#include "maskededit.h"
 #include <wx/statusbr.h>
 #include <wx/gdicmn.h>
 #include <wx/font.h>
@@ -118,30 +120,30 @@ class X584MainBase : public wxFrame
 		wxTextCtrl* m_commandDescription;
 		wxPanel* m_panel3;
 		wxStaticText* m_staticText9;
-		wxTextCtrl* m_textCtrl11;
+		wxMaskedEditText* m_fieldR0;
 		wxStaticText* m_staticText10;
-		wxTextCtrl* m_textCtrl12;
+		wxMaskedEditText* m_fieldR1;
 		wxStaticText* m_staticText11;
-		wxTextCtrl* m_textCtrl13;
+		wxMaskedEditText* m_fieldR2;
 		wxStaticText* m_staticText12;
-		wxTextCtrl* m_textCtrl14;
+		wxMaskedEditText* m_fieldR3;
 		wxStaticText* m_staticText13;
-		wxTextCtrl* m_textCtrl15;
+		wxMaskedEditText* m_fieldR4;
 		wxStaticText* m_staticText14;
-		wxTextCtrl* m_textCtrl16;
+		wxMaskedEditText* m_fieldR5;
 		wxStaticText* m_staticText15;
-		wxTextCtrl* m_textCtrl17;
+		wxMaskedEditText* m_fieldR6;
 		wxStaticText* m_staticText16;
-		wxTextCtrl* m_textCtrl18;
+		wxMaskedEditText* m_fieldR7;
 		wxStaticText* m_staticText17;
-		wxTextCtrl* m_textCtrl19;
+		wxMaskedEditText* m_fieldWR;
 		wxStaticText* m_staticText18;
-		wxTextCtrl* m_textCtrl20;
+		wxMaskedEditText* m_fieldXWR;
 		wxPanel* m_panel4;
 		wxStaticText* m_staticText19;
-		wxTextCtrl* m_textCtrl21;
+		wxMaskedEditText* m_fieldDO;
 		wxStaticText* m_staticText20;
-		wxTextCtrl* m_textCtrl22;
+		wxMaskedEditText* m_fieldDA;
 		wxPanel* m_panel5;
 		wxCheckBox* m_checkBox1;
 		wxCheckBox* m_checkBox2;
@@ -188,7 +190,7 @@ class X584MainBase : public wxFrame
 
 	public:
 
-		X584MainBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("X584"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 950,-1 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+		X584MainBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("X584"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 950,920 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 
 		~X584MainBase();
 
