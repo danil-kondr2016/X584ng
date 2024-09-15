@@ -15,7 +15,7 @@
     <property name="encoding">UTF-8</property>
     <property name="file">X584ngBase</property>
     <property name="first_id">6000</property>
-    <property name="internationalize">1</property>
+    <property name="internationalize">0</property>
     <property name="lua_skip_events">1</property>
     <property name="lua_ui_table">UI</property>
     <property name="name">X584ng</property>
@@ -31,7 +31,7 @@
     <property name="relative_path">1</property>
     <property name="use_microsoft_bom">0</property>
     <property name="use_native_eol">1</property>
-    <object class="Frame" expanded="false">
+    <object class="Frame" expanded="true">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg">wxSYS_COLOUR_WINDOW</property>
@@ -47,10 +47,10 @@
       <property name="hidden">0</property>
       <property name="id">wxID_ANY</property>
       <property name="maximum_size"></property>
-      <property name="minimum_size"></property>
+      <property name="minimum_size">-1,-1</property>
       <property name="name">X584MainBase</property>
       <property name="pos"></property>
-      <property name="size">950,-1</property>
+      <property name="size">950,920</property>
       <property name="style">wxDEFAULT_FRAME_STYLE</property>
       <property name="subclass">; ; forward_declare</property>
       <property name="title">X584</property>
@@ -84,7 +84,7 @@
         <property name="window_name"></property>
         <property name="window_style"></property>
       </object>
-      <object class="wxMenuBar" expanded="false">
+      <object class="wxMenuBar" expanded="true">
         <property name="bg"></property>
         <property name="context_help"></property>
         <property name="context_menu">1</property>
@@ -111,7 +111,7 @@
           <property name="name">m_fileMenu</property>
           <property name="permission">protected</property>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/new.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -125,7 +125,7 @@
             <event name="OnMenuSelection">NewItemClick</event>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/open.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -139,8 +139,8 @@
             <event name="OnMenuSelection">OpenItemClick</event>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
-            <property name="checked">0</property>
+            <property name="bitmap">Load From Embedded File; icons/save.bmp</property>
+            <property name="checked">1</property>
             <property name="enabled">1</property>
             <property name="help"></property>
             <property name="id">wxID_SAVE</property>
@@ -153,7 +153,7 @@
             <event name="OnMenuSelection">SaveItemClick</event>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/save.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -171,7 +171,7 @@
             <property name="permission">none</property>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/exit.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -190,7 +190,7 @@
           <property name="name">m_menuEdit</property>
           <property name="permission">protected</property>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/cut.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -204,7 +204,7 @@
             <event name="OnMenuSelection">CutItemClick</event>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/copy.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -218,7 +218,7 @@
             <event name="OnMenuSelection">CopyItemClick</event>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/paste.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -232,7 +232,7 @@
             <event name="OnMenuSelection">PasteItemClick</event>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/delete.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -269,7 +269,7 @@
           <property name="name">m_menuDebug</property>
           <property name="permission">protected</property>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/run.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -283,7 +283,7 @@
             <event name="OnMenuSelection">RunItemClick</event>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/step.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -297,7 +297,7 @@
             <event name="OnMenuSelection">StepItemClick</event>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/until.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -315,7 +315,7 @@
             <property name="permission">none</property>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/break.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -329,7 +329,7 @@
             <event name="OnMenuSelection">BreakItemClick</event>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From Embedded File; icons/stop.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -348,7 +348,7 @@
           <property name="name">m_menuHelp</property>
           <property name="permission">protected</property>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From File; icons/help.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -366,7 +366,7 @@
             <property name="permission">none</property>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap"></property>
+            <property name="bitmap">Load From File; icons/about.bmp</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -381,7 +381,7 @@
           </object>
         </object>
       </object>
-      <object class="wxToolBar" expanded="false">
+      <object class="wxToolBar" expanded="true">
         <property name="BottomDockable">1</property>
         <property name="LeftDockable">1</property>
         <property name="RightDockable">1</property>
@@ -439,7 +439,7 @@
         <property name="window_name"></property>
         <property name="window_style"></property>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/new.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_NEW</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -451,7 +451,7 @@
           <event name="OnToolClicked">NewItemClick</event>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/open.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_OPEN</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -463,7 +463,7 @@
           <event name="OnToolClicked">OpenItemClick</event>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/save.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_SAVE</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -475,7 +475,7 @@
           <event name="OnToolClicked">SaveItemClick</event>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/exit.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_EXIT</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -490,7 +490,7 @@
           <property name="permission">protected</property>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/cut.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_CUT</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -502,7 +502,7 @@
           <event name="OnToolClicked">CutItemClick</event>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/copy.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_COPY</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -514,7 +514,7 @@
           <event name="OnToolClicked">CopyItemClick</event>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/paste.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_PASTE</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -526,7 +526,7 @@
           <event name="OnToolClicked">PasteItemClick</event>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/delete.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_DELETE</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -541,7 +541,7 @@
           <property name="permission">protected</property>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/run.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_ANY</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -553,7 +553,7 @@
           <event name="OnToolClicked">RunItemClick</event>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From File; icons/step.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_ANY</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -565,7 +565,7 @@
           <event name="OnToolClicked">StopItemClick</event>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/until.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_ANY</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -580,7 +580,7 @@
           <property name="permission">protected</property>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From File; icons/break.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_ANY</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -592,7 +592,7 @@
           <event name="OnToolClicked">BreakItemClick</event>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/stop.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_ANY</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -607,7 +607,7 @@
           <property name="permission">protected</property>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/help.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_HELP</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -619,7 +619,7 @@
           <event name="OnToolClicked">HelpItemClick</event>
         </object>
         <object class="tool" expanded="false">
-          <property name="bitmap"></property>
+          <property name="bitmap">Load From Embedded File; icons/about.bmp</property>
           <property name="context_menu">0</property>
           <property name="id">wxID_ABOUT</property>
           <property name="kind">wxITEM_NORMAL</property>
@@ -636,11 +636,11 @@
         <property name="name">bSizer1</property>
         <property name="orient">wxHORIZONTAL</property>
         <property name="permission">none</property>
-        <object class="sizeritem" expanded="false">
+        <object class="sizeritem" expanded="true">
           <property name="border">5</property>
           <property name="flag">wxEXPAND</property>
           <property name="proportion">3</property>
-          <object class="wxBoxSizer" expanded="false">
+          <object class="wxBoxSizer" expanded="true">
             <property name="minimum_size"></property>
             <property name="name">bSizer3</property>
             <property name="orient">wxVERTICAL</property>
@@ -730,11 +730,11 @@
             </object>
           </object>
         </object>
-        <object class="sizeritem" expanded="false">
+        <object class="sizeritem" expanded="true">
           <property name="border">5</property>
           <property name="flag">wxEXPAND</property>
           <property name="proportion">0</property>
-          <object class="wxBoxSizer" expanded="false">
+          <object class="wxBoxSizer" expanded="true">
             <property name="minimum_size"></property>
             <property name="name">bSizer2</property>
             <property name="orient">wxVERTICAL</property>
@@ -1959,7 +1959,7 @@
                           <property name="minimize_button">0</property>
                           <property name="minimum_size"></property>
                           <property name="moveable">1</property>
-                          <property name="name">m_textCtrl11</property>
+                          <property name="name">m_fieldR0</property>
                           <property name="pane_border">1</property>
                           <property name="pane_position"></property>
                           <property name="pane_size"></property>
@@ -1970,7 +1970,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">; ; forward_declare</property>
+                          <property name="subclass">wxMaskedEditText; maskededit.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
@@ -2089,7 +2089,7 @@
                           <property name="minimize_button">0</property>
                           <property name="minimum_size"></property>
                           <property name="moveable">1</property>
-                          <property name="name">m_textCtrl12</property>
+                          <property name="name">m_fieldR1</property>
                           <property name="pane_border">1</property>
                           <property name="pane_position"></property>
                           <property name="pane_size"></property>
@@ -2100,14 +2100,14 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">; ; forward_declare</property>
+                          <property name="subclass">wxMaskedEditText; maskededit.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
                           <property name="validator_style">wxFILTER_NONE</property>
                           <property name="validator_type">wxDefaultValidator</property>
                           <property name="validator_variable"></property>
-                          <property name="value"></property>
+                          <property name="value">0000 0000 0000 0000</property>
                           <property name="window_extra_style"></property>
                           <property name="window_name"></property>
                           <property name="window_style"></property>
@@ -2219,7 +2219,7 @@
                           <property name="minimize_button">0</property>
                           <property name="minimum_size"></property>
                           <property name="moveable">1</property>
-                          <property name="name">m_textCtrl13</property>
+                          <property name="name">m_fieldR2</property>
                           <property name="pane_border">1</property>
                           <property name="pane_position"></property>
                           <property name="pane_size"></property>
@@ -2230,14 +2230,14 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">; ; forward_declare</property>
+                          <property name="subclass">wxMaskedEditText; maskededit.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
                           <property name="validator_style">wxFILTER_NONE</property>
                           <property name="validator_type">wxDefaultValidator</property>
                           <property name="validator_variable"></property>
-                          <property name="value"></property>
+                          <property name="value">0000 0000 0000 0000</property>
                           <property name="window_extra_style"></property>
                           <property name="window_name"></property>
                           <property name="window_style"></property>
@@ -2349,7 +2349,7 @@
                           <property name="minimize_button">0</property>
                           <property name="minimum_size"></property>
                           <property name="moveable">1</property>
-                          <property name="name">m_textCtrl14</property>
+                          <property name="name">m_fieldR3</property>
                           <property name="pane_border">1</property>
                           <property name="pane_position"></property>
                           <property name="pane_size"></property>
@@ -2360,14 +2360,14 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">; ; forward_declare</property>
+                          <property name="subclass">wxMaskedEditText; maskededit.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
                           <property name="validator_style">wxFILTER_NONE</property>
                           <property name="validator_type">wxDefaultValidator</property>
                           <property name="validator_variable"></property>
-                          <property name="value"></property>
+                          <property name="value">0000 0000 0000 0000</property>
                           <property name="window_extra_style"></property>
                           <property name="window_name"></property>
                           <property name="window_style"></property>
@@ -2479,7 +2479,7 @@
                           <property name="minimize_button">0</property>
                           <property name="minimum_size"></property>
                           <property name="moveable">1</property>
-                          <property name="name">m_textCtrl15</property>
+                          <property name="name">m_fieldR4</property>
                           <property name="pane_border">1</property>
                           <property name="pane_position"></property>
                           <property name="pane_size"></property>
@@ -2490,14 +2490,14 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">; ; forward_declare</property>
+                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
                           <property name="validator_style">wxFILTER_NONE</property>
                           <property name="validator_type">wxDefaultValidator</property>
                           <property name="validator_variable"></property>
-                          <property name="value"></property>
+                          <property name="value">0000 0000 0000 0000</property>
                           <property name="window_extra_style"></property>
                           <property name="window_name"></property>
                           <property name="window_style"></property>
@@ -2609,7 +2609,7 @@
                           <property name="minimize_button">0</property>
                           <property name="minimum_size"></property>
                           <property name="moveable">1</property>
-                          <property name="name">m_textCtrl16</property>
+                          <property name="name">m_fieldR5</property>
                           <property name="pane_border">1</property>
                           <property name="pane_position"></property>
                           <property name="pane_size"></property>
@@ -2620,14 +2620,14 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">; ; forward_declare</property>
+                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
                           <property name="validator_style">wxFILTER_NONE</property>
                           <property name="validator_type">wxDefaultValidator</property>
                           <property name="validator_variable"></property>
-                          <property name="value"></property>
+                          <property name="value">0000 0000 0000 0000</property>
                           <property name="window_extra_style"></property>
                           <property name="window_name"></property>
                           <property name="window_style"></property>
@@ -2739,7 +2739,7 @@
                           <property name="minimize_button">0</property>
                           <property name="minimum_size"></property>
                           <property name="moveable">1</property>
-                          <property name="name">m_textCtrl17</property>
+                          <property name="name">m_fieldR6</property>
                           <property name="pane_border">1</property>
                           <property name="pane_position"></property>
                           <property name="pane_size"></property>
@@ -2750,14 +2750,14 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">; ; forward_declare</property>
+                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
                           <property name="validator_style">wxFILTER_NONE</property>
                           <property name="validator_type">wxDefaultValidator</property>
                           <property name="validator_variable"></property>
-                          <property name="value"></property>
+                          <property name="value">0000 0000 0000 0000</property>
                           <property name="window_extra_style"></property>
                           <property name="window_name"></property>
                           <property name="window_style"></property>
@@ -2869,7 +2869,7 @@
                           <property name="minimize_button">0</property>
                           <property name="minimum_size"></property>
                           <property name="moveable">1</property>
-                          <property name="name">m_textCtrl18</property>
+                          <property name="name">m_fieldR7</property>
                           <property name="pane_border">1</property>
                           <property name="pane_position"></property>
                           <property name="pane_size"></property>
@@ -2880,14 +2880,14 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">; ; forward_declare</property>
+                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
                           <property name="validator_style">wxFILTER_NONE</property>
                           <property name="validator_type">wxDefaultValidator</property>
                           <property name="validator_variable"></property>
-                          <property name="value"></property>
+                          <property name="value">0000 0000 0000 0000</property>
                           <property name="window_extra_style"></property>
                           <property name="window_name"></property>
                           <property name="window_style"></property>
@@ -3019,7 +3019,7 @@
                           <property name="minimize_button">0</property>
                           <property name="minimum_size"></property>
                           <property name="moveable">1</property>
-                          <property name="name">m_textCtrl19</property>
+                          <property name="name">m_fieldWR</property>
                           <property name="pane_border">1</property>
                           <property name="pane_position"></property>
                           <property name="pane_size"></property>
@@ -3030,14 +3030,14 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">; ; forward_declare</property>
+                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
                           <property name="validator_style">wxFILTER_NONE</property>
                           <property name="validator_type">wxDefaultValidator</property>
                           <property name="validator_variable"></property>
-                          <property name="value"></property>
+                          <property name="value">0000 0000 0000 0000</property>
                           <property name="window_extra_style"></property>
                           <property name="window_name"></property>
                           <property name="window_style"></property>
@@ -3149,7 +3149,7 @@
                           <property name="minimize_button">0</property>
                           <property name="minimum_size"></property>
                           <property name="moveable">1</property>
-                          <property name="name">m_textCtrl20</property>
+                          <property name="name">m_fieldXWR</property>
                           <property name="pane_border">1</property>
                           <property name="pane_position"></property>
                           <property name="pane_size"></property>
@@ -3160,14 +3160,14 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">; ; forward_declare</property>
+                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
                           <property name="validator_style">wxFILTER_NONE</property>
                           <property name="validator_type">wxDefaultValidator</property>
                           <property name="validator_variable"></property>
-                          <property name="value"></property>
+                          <property name="value">0000 0000 0000 0000</property>
                           <property name="window_extra_style"></property>
                           <property name="window_name"></property>
                           <property name="window_style"></property>
@@ -3364,7 +3364,7 @@
                           <property name="minimize_button">0</property>
                           <property name="minimum_size"></property>
                           <property name="moveable">1</property>
-                          <property name="name">m_textCtrl21</property>
+                          <property name="name">m_fieldDO</property>
                           <property name="pane_border">1</property>
                           <property name="pane_position"></property>
                           <property name="pane_size"></property>
@@ -3375,14 +3375,14 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">; ; forward_declare</property>
+                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
                           <property name="validator_style">wxFILTER_NONE</property>
                           <property name="validator_type">wxDefaultValidator</property>
                           <property name="validator_variable"></property>
-                          <property name="value"></property>
+                          <property name="value">0000 0000 0000 0000</property>
                           <property name="window_extra_style"></property>
                           <property name="window_name"></property>
                           <property name="window_style"></property>
@@ -3494,7 +3494,7 @@
                           <property name="minimize_button">0</property>
                           <property name="minimum_size"></property>
                           <property name="moveable">1</property>
-                          <property name="name">m_textCtrl22</property>
+                          <property name="name">m_fieldDA</property>
                           <property name="pane_border">1</property>
                           <property name="pane_position"></property>
                           <property name="pane_size"></property>
@@ -3505,14 +3505,14 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">; ; forward_declare</property>
+                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
                           <property name="validator_style">wxFILTER_NONE</property>
                           <property name="validator_type">wxDefaultValidator</property>
                           <property name="validator_variable"></property>
-                          <property name="value"></property>
+                          <property name="value">0000 0000 0000 0000</property>
                           <property name="window_extra_style"></property>
                           <property name="window_name"></property>
                           <property name="window_style"></property>
@@ -3864,7 +3864,7 @@
                   <object class="sizeritem" expanded="false">
                     <property name="border">5</property>
                     <property name="flag">wxEXPAND</property>
-                    <property name="proportion">0</property>
+                    <property name="proportion">1</property>
                     <object class="spacer" expanded="false">
                       <property name="height">0</property>
                       <property name="permission">protected</property>
