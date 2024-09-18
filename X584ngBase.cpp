@@ -5,8 +5,6 @@
 // PLEASE DO *NOT* EDIT THIS FILE!
 ///////////////////////////////////////////////////////////////////////////
 
-#include "maskededit.h"
-
 #include "X584ngBase.h"
 
 #include "res/about.bmp.h"
@@ -349,56 +347,56 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 	m_staticText9->Wrap( -1 );
 	fgSizer1->Add( m_staticText9, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
-	m_fieldR0 = new wxMaskedEditText( sbSizer3->GetStaticBox(), ID_R0, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
+	m_fieldR0 = new BinaryInput16( sbSizer3->GetStaticBox(), ID_R0, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
 	fgSizer1->Add( m_fieldR0, 1, wxALL|wxEXPAND, 5 );
 
 	m_staticText10 = new wxStaticText( sbSizer3->GetStaticBox(), wxID_ANY, wxT("РОН1"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText10->Wrap( -1 );
 	fgSizer1->Add( m_staticText10, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
-	m_fieldR1 = new wxMaskedEditText( sbSizer3->GetStaticBox(), ID_R1, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
+	m_fieldR1 = new BinaryInput16( sbSizer3->GetStaticBox(), ID_R1, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
 	fgSizer1->Add( m_fieldR1, 0, wxALL|wxEXPAND, 5 );
 
 	m_staticText11 = new wxStaticText( sbSizer3->GetStaticBox(), wxID_ANY, wxT("РОН2"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText11->Wrap( -1 );
 	fgSizer1->Add( m_staticText11, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
-	m_fieldR2 = new wxMaskedEditText( sbSizer3->GetStaticBox(), ID_R2, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
+	m_fieldR2 = new BinaryInput16( sbSizer3->GetStaticBox(), ID_R2, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
 	fgSizer1->Add( m_fieldR2, 0, wxALL|wxEXPAND, 5 );
 
 	m_staticText12 = new wxStaticText( sbSizer3->GetStaticBox(), wxID_ANY, wxT("РОН3"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText12->Wrap( -1 );
 	fgSizer1->Add( m_staticText12, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
-	m_fieldR3 = new wxMaskedEditText( sbSizer3->GetStaticBox(), ID_R3, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
+	m_fieldR3 = new BinaryInput16( sbSizer3->GetStaticBox(), ID_R3, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
 	fgSizer1->Add( m_fieldR3, 0, wxALL|wxEXPAND, 5 );
 
 	m_staticText13 = new wxStaticText( sbSizer3->GetStaticBox(), wxID_ANY, wxT("РОН4"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText13->Wrap( -1 );
 	fgSizer1->Add( m_staticText13, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
-	m_fieldR4 = new wxMaskedEditText( sbSizer3->GetStaticBox(), ID_R4, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
+	m_fieldR4 = new BinaryInput16( sbSizer3->GetStaticBox(), ID_R4, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
 	fgSizer1->Add( m_fieldR4, 0, wxALL|wxEXPAND, 5 );
 
 	m_staticText14 = new wxStaticText( sbSizer3->GetStaticBox(), wxID_ANY, wxT("РОН5"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText14->Wrap( -1 );
 	fgSizer1->Add( m_staticText14, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
-	m_fieldR5 = new wxMaskedEditText( sbSizer3->GetStaticBox(), ID_R5, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
+	m_fieldR5 = new BinaryInput16( sbSizer3->GetStaticBox(), ID_R5, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
 	fgSizer1->Add( m_fieldR5, 0, wxALL|wxEXPAND, 5 );
 
 	m_staticText15 = new wxStaticText( sbSizer3->GetStaticBox(), wxID_ANY, wxT("РОН6"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText15->Wrap( -1 );
 	fgSizer1->Add( m_staticText15, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
-	m_fieldR6 = new wxMaskedEditText( sbSizer3->GetStaticBox(), ID_R6, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
+	m_fieldR6 = new BinaryInput16( sbSizer3->GetStaticBox(), ID_R6, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
 	fgSizer1->Add( m_fieldR6, 0, wxALL|wxEXPAND, 5 );
 
 	m_staticText16 = new wxStaticText( sbSizer3->GetStaticBox(), wxID_ANY, wxT("РОН7"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText16->Wrap( -1 );
 	fgSizer1->Add( m_staticText16, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
-	m_fieldR7 = new wxMaskedEditText( sbSizer3->GetStaticBox(), ID_R7, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
+	m_fieldR7 = new BinaryInput16( sbSizer3->GetStaticBox(), ID_R7, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
 	fgSizer1->Add( m_fieldR7, 0, wxALL|wxEXPAND, 5 );
 
 
@@ -411,14 +409,14 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 	m_staticText17->Wrap( -1 );
 	fgSizer1->Add( m_staticText17, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
-	m_fieldWR = new wxMaskedEditText( sbSizer3->GetStaticBox(), ID_WR, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
+	m_fieldWR = new BinaryInput16( sbSizer3->GetStaticBox(), ID_WR, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
 	fgSizer1->Add( m_fieldWR, 0, wxALL|wxEXPAND, 5 );
 
 	m_staticText18 = new wxStaticText( sbSizer3->GetStaticBox(), wxID_ANY, wxT("РРР"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText18->Wrap( -1 );
 	fgSizer1->Add( m_staticText18, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
-	m_fieldXWR = new wxMaskedEditText( sbSizer3->GetStaticBox(), ID_XWR, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
+	m_fieldXWR = new BinaryInput16( sbSizer3->GetStaticBox(), ID_XWR, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
 	fgSizer1->Add( m_fieldXWR, 0, wxALL|wxEXPAND, 5 );
 
 
@@ -444,14 +442,14 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 	m_staticText19->Wrap( -1 );
 	fgSizer2->Add( m_staticText19, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
-	m_fieldDO = new wxMaskedEditText( sbSizer4->GetStaticBox(), ID_DO, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
+	m_fieldDO = new BinaryInput16( sbSizer4->GetStaticBox(), ID_DO, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
 	fgSizer2->Add( m_fieldDO, 0, wxALL|wxEXPAND, 5 );
 
 	m_staticText20 = new wxStaticText( sbSizer4->GetStaticBox(), wxID_ANY, wxT("ШАдр"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText20->Wrap( -1 );
 	fgSizer2->Add( m_staticText20, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
-	m_fieldDA = new wxMaskedEditText( sbSizer4->GetStaticBox(), ID_DA, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
+	m_fieldDA = new BinaryInput16( sbSizer4->GetStaticBox(), ID_DA, wxT("0000 0000 0000 0000"), wxDefaultPosition, wxSize( -1,21 ), 0 );
 	fgSizer2->Add( m_fieldDA, 0, wxALL|wxEXPAND, 5 );
 
 

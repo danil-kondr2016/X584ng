@@ -631,7 +631,7 @@
           <event name="OnToolClicked">AboutItemClick</event>
         </object>
       </object>
-      <object class="wxBoxSizer" expanded="false">
+      <object class="wxBoxSizer" expanded="true">
         <property name="minimum_size"></property>
         <property name="name">bSizer1</property>
         <property name="orient">wxHORIZONTAL</property>
@@ -1970,7 +1970,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">wxMaskedEditText; maskededit.h; </property>
+                          <property name="subclass">BinaryInput16; BinaryInput16.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
@@ -2100,7 +2100,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">wxMaskedEditText; maskededit.h; </property>
+                          <property name="subclass">BinaryInput16; BinaryInput16.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
@@ -2230,7 +2230,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">wxMaskedEditText; maskededit.h; </property>
+                          <property name="subclass">BinaryInput16; BinaryInput16.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
@@ -2360,7 +2360,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">wxMaskedEditText; maskededit.h; </property>
+                          <property name="subclass">BinaryInput16; BinaryInput16.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
@@ -2490,7 +2490,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
+                          <property name="subclass">BinaryInput16; BinaryInput16.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
@@ -2620,7 +2620,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
+                          <property name="subclass">BinaryInput16; BinaryInput16.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
@@ -2750,7 +2750,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
+                          <property name="subclass">BinaryInput16; BinaryInput16.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
@@ -2880,7 +2880,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
+                          <property name="subclass">BinaryInput16; BinaryInput16.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
@@ -3030,7 +3030,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
+                          <property name="subclass">BinaryInput16; BinaryInput16.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
@@ -3160,7 +3160,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
+                          <property name="subclass">BinaryInput16; BinaryInput16.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
@@ -3375,7 +3375,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
+                          <property name="subclass">BinaryInput16; BinaryInput16.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>
@@ -3505,7 +3505,7 @@
                           <property name="show">1</property>
                           <property name="size">-1,21</property>
                           <property name="style"></property>
-                          <property name="subclass">wxMaskedEditText; maskededit.h; forward_declare</property>
+                          <property name="subclass">BinaryInput16; BinaryInput16.h; </property>
                           <property name="toolbar_pane">0</property>
                           <property name="tooltip"></property>
                           <property name="validator_data_type"></property>

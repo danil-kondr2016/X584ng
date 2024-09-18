@@ -1640,8 +1640,7 @@
 	"wx_pch.h"
 	"x584ngMain.h"
 
-1726385864 source:/home/danila/sources/x584ng/X584ngBase.cpp
-	"maskededit.h"
+1726639274 source:/home/danila/sources/x584ng/X584ngBase.cpp
 	"X584ngBase.h"
 	"res/about.bmp.h"
 	"res/break.bmp.h"
@@ -1659,10 +1658,10 @@
 	"res/stop.bmp.h"
 	"res/until.bmp.h"
 
-1726385864 /home/danila/sources/x584ng/X584ngBase.h
+1726639274 /home/danila/sources/x584ng/X584ngBase.h
 	<wx/artprov.h>
 	<wx/xrc/xmlres.h>
-	"maskededit.h"
+	"BinaryInput16.h"
 	<wx/statusbr.h>
 	<wx/gdicmn.h>
 	<wx/font.h>
@@ -1864,8 +1863,9 @@
 1677198190 /usr/include/wx-3.2/wx/gtk/clipbrd.h
 	"wx/weakref.h"
 
-1726385646 source:/home/danila/sources/x584ng/X584Main.cpp
+1726639339 source:/home/danila/sources/x584ng/X584Main.cpp
 	"X584Main.h"
+	<wx/validate.h>
 
 1726385743 /home/danila/sources/x584ng/X584Main.h
 	"X584ngBase.h"
@@ -1948,4 +1948,12 @@
 	<wx/mstream.h>
 	<wx/image.h>
 	<wx/bitmap.h>
+
+1726638968 /home/danila/sources/x584ng/BinaryInput16.h
+	<wx/textctrl.h>
+	<wx/msgdlg.h>
+
+1726639010 source:/home/danila/sources/x584ng/BinaryInput16.cpp
+	"BinaryInput16.h"
+	<wx/msgdlg.h>
 

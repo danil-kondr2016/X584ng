@@ -41,12 +41,12 @@
 		<Linker>
 			<Add option="`wx-config --libs --unicode=yes`" />
 		</Linker>
+		<Unit filename="BinaryInput16.cpp" />
+		<Unit filename="BinaryInput16.h" />
 		<Unit filename="X584Main.cpp" />
 		<Unit filename="X584Main.h" />
 		<Unit filename="X584ngBase.cpp" />
 		<Unit filename="X584ngBase.h" />
-		<Unit filename="maskededit.cpp" />
-		<Unit filename="maskededit.h" />
 		<Unit filename="x584ngApp.cpp" />
 		<Unit filename="x584ngApp.h" />
 		<Extensions>

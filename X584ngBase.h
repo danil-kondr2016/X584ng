@@ -9,9 +9,7 @@
 
 #include <wx/artprov.h>
 #include <wx/xrc/xmlres.h>
-class wxMaskedEditText;
-
-#include "maskededit.h"
+#include "BinaryInput16.h"
 #include <wx/statusbr.h>
 #include <wx/gdicmn.h>
 #include <wx/font.h>
@@ -120,30 +118,30 @@ class X584MainBase : public wxFrame
 		wxTextCtrl* m_commandDescription;
 		wxPanel* m_panel3;
 		wxStaticText* m_staticText9;
-		wxMaskedEditText* m_fieldR0;
+		BinaryInput16* m_fieldR0;
 		wxStaticText* m_staticText10;
-		wxMaskedEditText* m_fieldR1;
+		BinaryInput16* m_fieldR1;
 		wxStaticText* m_staticText11;
-		wxMaskedEditText* m_fieldR2;
+		BinaryInput16* m_fieldR2;
 		wxStaticText* m_staticText12;
-		wxMaskedEditText* m_fieldR3;
+		BinaryInput16* m_fieldR3;
 		wxStaticText* m_staticText13;
-		wxMaskedEditText* m_fieldR4;
+		BinaryInput16* m_fieldR4;
 		wxStaticText* m_staticText14;
-		wxMaskedEditText* m_fieldR5;
+		BinaryInput16* m_fieldR5;
 		wxStaticText* m_staticText15;
-		wxMaskedEditText* m_fieldR6;
+		BinaryInput16* m_fieldR6;
 		wxStaticText* m_staticText16;
-		wxMaskedEditText* m_fieldR7;
+		BinaryInput16* m_fieldR7;
 		wxStaticText* m_staticText17;
-		wxMaskedEditText* m_fieldWR;
+		BinaryInput16* m_fieldWR;
 		wxStaticText* m_staticText18;
-		wxMaskedEditText* m_fieldXWR;
+		BinaryInput16* m_fieldXWR;
 		wxPanel* m_panel4;
 		wxStaticText* m_staticText19;
-		wxMaskedEditText* m_fieldDO;
+		BinaryInput16* m_fieldDO;
 		wxStaticText* m_staticText20;
-		wxMaskedEditText* m_fieldDA;
+		BinaryInput16* m_fieldDA;
 		wxPanel* m_panel5;
 		wxCheckBox* m_checkBox1;
 		wxCheckBox* m_checkBox2;
