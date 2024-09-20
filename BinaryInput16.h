@@ -33,6 +33,8 @@ class BinaryInput16 : public wxTextCtrl
         void OnKeyDown(wxKeyEvent &event);
         void OnLeftDown(wxMouseEvent &event);
         void OnLeftUp(wxMouseEvent &event);
+        void OnCut(wxClipboardTextEvent &event);
+        void OnPaste(wxClipboardTextEvent &event);
 
         /* Functions */
         void InsertChar(int kc);

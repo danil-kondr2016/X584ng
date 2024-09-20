@@ -1,6 +1,9 @@
 #include "BinaryInput16.h"
+#include "wx/event.h"
 
 #include <wx/msgdlg.h>
+#include <wx/clipbrd.h>
+#include <wx/dataobj.h>
 
 wxDEFINE_EVENT(BI_EVT_INTEGER_CHANGE, wxCommandEvent);
 
@@ -23,9 +26,69 @@ BinaryInput16::BinaryInput16(
     Connect(wxEVT_KEY_DOWN, wxKeyEventHandler(BinaryInput16::OnKeyDown), NULL, this);
     Connect(wxEVT_LEFT_DOWN, wxMouseEventHandler(BinaryInput16::OnLeftDown), NULL, this);
     Connect(wxEVT_LEFT_UP, wxMouseEventHandler(BinaryInput16::OnLeftUp), NULL, this);
+    Connect(wxEVT_TEXT_CUT, wxClipboardTextEventHandler(BinaryInput16::OnCut), NULL, this);
+    Connect(wxEVT_TEXT_PASTE, wxClipboardTextEventHandler(BinaryInput16::OnPaste), NULL, this);
     this->value = 0;
     UpdateStringValue();
     SetSelection(0, 1);
+}
+
+void BinaryInput16::OnCut(wxClipboardTextEvent &event)
+{
+    event.Skip(false);
+
+    long from, to;
+    GetSelection(&from, &to);
+
+    wxString toBuffer = GetValue().SubString(from, to);
+    if (wxTheClipboard->Open()) {
+        wxTheClipboard->SetData(new wxTextDataObject(toBuffer));
+        wxTheClipboard->Close();
+    }
+
+    Delete();
+    SetSelection(from, from + 1);
+}
+
+void BinaryInput16::OnPaste(wxClipboardTextEvent &event)
+{
+    event.Skip(false);
+
+    long from, to;
+    GetSelection(&from, &to);
+
+    long length = GetValue().Length();
+    while (from < length && GetValue()[from] == ' ') from++;
+
+    if (from >= length)
+        return;
+
+    wxString toPaste;
+    if (wxTheClipboard->Open()) {
+        if (wxTheClipboard->IsSupported(wxDF_TEXT)) {
+            wxTextDataObject data;
+            wxTheClipboard->GetData(data);
+            toPaste = data.GetText();
+        }
+        wxTheClipboard->Close();
+    }
+
+    wxString newValue = GetValue();
+
+    size_t i, j;
+    for (i = 0, j = from; i < toPaste.Length() && j < length; i++) {
+        if (toPaste[i].GetValue() < '0' || toPaste[i].GetValue() > '9')
+            continue;
+
+        if (toPaste[i].GetValue() > '2')
+            return;
+
+        newValue.SetChar(j, toPaste[i]);
+        do j++; while (newValue[j] == ' ');
+    }
+
+    SetValue(newValue);
+    SetSelection(j - 1, j);
 }
 
 void BinaryInput16::OnLeftDown(wxMouseEvent &event)
