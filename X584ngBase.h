@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// C++ code generated with wxFormBuilder (version 4.2.1-0-g80c4cb6-dirty)
+// C++ code generated with wxFormBuilder (version 4.2.1-0-g80c4cb6)
 // http://www.wxformbuilder.org/
 //
 // PLEASE DO *NOT* EDIT THIS FILE!
@@ -188,7 +188,7 @@ class X584MainBase : public wxFrame
 
 	public:
 
-		X584MainBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("X584"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 950,920 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+		X584MainBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("X584"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 950,737 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 
 		~X584MainBase();
 

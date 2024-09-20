@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// C++ code generated with wxFormBuilder (version 4.2.1-0-g80c4cb6-dirty)
+// C++ code generated with wxFormBuilder (version 4.2.1-0-g80c4cb6)
 // http://www.wxformbuilder.org/
 //
 // PLEASE DO *NOT* EDIT THIS FILE!
@@ -27,7 +27,7 @@
 
 X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxFrame( parent, id, title, pos, size, style )
 {
-	this->SetSizeHints( wxSize( -1,-1 ), wxDefaultSize );
+	this->SetSizeHints( wxSize( -1,737 ), wxDefaultSize );
 	this->SetBackgroundColour( wxSystemSettings::GetColour( wxSYS_COLOUR_WINDOW ) );
 
 	m_statusBar1 = this->CreateStatusBar( 5, wxSTB_SIZEGRIP, wxID_ANY );
@@ -181,9 +181,9 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 	wxMenuItem* m_menuItemHelp;
 	m_menuItemHelp = new wxMenuItem( m_menuHelp, wxID_HELP, wxString( wxT("Справка") ) + wxT('\t') + wxT("F1"), wxEmptyString, wxITEM_NORMAL );
 	#ifdef __WXMSW__
-	m_menuItemHelp->SetBitmaps( wxBitmap( wxT("icons/help.bmp"), wxBITMAP_TYPE_ANY ) );
+	m_menuItemHelp->SetBitmaps( help_bmp_to_wx_bitmap() );
 	#elif (defined( __WXGTK__ ) || defined( __WXOSX__ ))
-	m_menuItemHelp->SetBitmap( wxBitmap( wxT("icons/help.bmp"), wxBITMAP_TYPE_ANY ) );
+	m_menuItemHelp->SetBitmap( help_bmp_to_wx_bitmap() );
 	#endif
 	m_menuHelp->Append( m_menuItemHelp );
 
@@ -192,9 +192,9 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 	wxMenuItem* m_menuItemAbout;
 	m_menuItemAbout = new wxMenuItem( m_menuHelp, wxID_ABOUT, wxString( wxT("О программе...") ) , wxEmptyString, wxITEM_NORMAL );
 	#ifdef __WXMSW__
-	m_menuItemAbout->SetBitmaps( wxBitmap( wxT("icons/about.bmp"), wxBITMAP_TYPE_ANY ) );
+	m_menuItemAbout->SetBitmaps( about_bmp_to_wx_bitmap() );
 	#elif (defined( __WXGTK__ ) || defined( __WXOSX__ ))
-	m_menuItemAbout->SetBitmap( wxBitmap( wxT("icons/about.bmp"), wxBITMAP_TYPE_ANY ) );
+	m_menuItemAbout->SetBitmap( about_bmp_to_wx_bitmap() );
 	#endif
 	m_menuHelp->Append( m_menuItemAbout );
 
@@ -225,13 +225,13 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 
 	m_toolRun = m_toolBar1->AddTool( wxID_ANY, wxT("tool"), run_bmp_to_wx_bitmap(), wxNullBitmap, wxITEM_NORMAL, wxT("Запустить программу"), wxT("Запустить программу"), NULL );
 
-	m_toolStep = m_toolBar1->AddTool( wxID_ANY, wxT("tool"), wxBitmap( wxT("icons/step.bmp"), wxBITMAP_TYPE_ANY ), wxNullBitmap, wxITEM_NORMAL, wxT("Выполнить текущую микроинструкцию"), wxT("Выполнить текущую микроинструкцию"), NULL );
+	m_toolStep = m_toolBar1->AddTool( wxID_ANY, wxT("tool"), step_bmp_to_wx_bitmap(), wxNullBitmap, wxITEM_NORMAL, wxT("Выполнить текущую микроинструкцию"), wxT("Выполнить текущую микроинструкцию"), NULL );
 
 	m_toolRunToCursor = m_toolBar1->AddTool( wxID_ANY, wxT("tool"), until_bmp_to_wx_bitmap(), wxNullBitmap, wxITEM_NORMAL, wxT("Выполнить программу до курсора"), wxT("Выполнить программу до курсора"), NULL );
 
 	m_toolBar1->AddSeparator();
 
-	m_toolBreak = m_toolBar1->AddTool( wxID_ANY, wxT("tool"), wxBitmap( wxT("icons/break.bmp"), wxBITMAP_TYPE_ANY ), wxNullBitmap, wxITEM_NORMAL, wxT("Прервать выполнение программы"), wxT("Прервать выполнение программы"), NULL );
+	m_toolBreak = m_toolBar1->AddTool( wxID_ANY, wxT("tool"), break_bmp_to_wx_bitmap(), wxNullBitmap, wxITEM_NORMAL, wxT("Прервать выполнение программы"), wxT("Прервать выполнение программы"), NULL );
 
 	m_toolReset = m_toolBar1->AddTool( wxID_ANY, wxT("tool"), stop_bmp_to_wx_bitmap(), wxNullBitmap, wxITEM_NORMAL, wxT("Сбросить программу"), wxT("Сбросить программу"), NULL );
 
@@ -463,7 +463,7 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 
 	m_panel5 = new wxPanel( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL );
 	wxBoxSizer* bSizer5;
-	bSizer5 = new wxBoxSizer( wxVERTICAL );
+	bSizer5 = new wxBoxSizer( wxHORIZONTAL );
 
 	wxStaticBoxSizer* sbSizer5;
 	sbSizer5 = new wxStaticBoxSizer( new wxStaticBox( m_panel5, wxID_ANY, wxT("Входы") ), wxVERTICAL );
@@ -486,7 +486,7 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 	bSizer5->Add( sbSizer5, 0, wxEXPAND, 5 );
 
 
-	bSizer5->Add( 10, 0, 1, wxEXPAND, 5 );
+	bSizer5->Add( 10, 0, 0, wxEXPAND, 5 );
 
 	wxStaticBoxSizer* sbSizer6;
 	sbSizer6 = new wxStaticBoxSizer( new wxStaticBox( m_panel5, wxID_ANY, wxT("Выходы") ), wxVERTICAL );
@@ -540,7 +540,7 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 	sbSizer6->Add( fgSizer3, 1, wxEXPAND, 5 );
 
 
-	bSizer5->Add( sbSizer6, 0, wxEXPAND, 5 );
+	bSizer5->Add( sbSizer6, 1, wxEXPAND, 5 );
 
 
 	m_panel5->SetSizer( bSizer5 );
