@@ -263,7 +263,7 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 	wxBoxSizer* bSizer2;
 	bSizer2 = new wxBoxSizer( wxVERTICAL );
 
-	m_opcodeTree = new wxTreeCtrl( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTR_DEFAULT_STYLE|wxTR_HAS_BUTTONS|wxTR_TWIST_BUTTONS );
+	m_opcodeTree = new wxTreeCtrl( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTR_DEFAULT_STYLE|wxTR_HAS_BUTTONS|wxTR_HIDE_ROOT|wxTR_TWIST_BUTTONS );
 	bSizer2->Add( m_opcodeTree, 2, wxALL|wxEXPAND, 5 );
 
 	m_panel1 = new wxPanel( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL );
