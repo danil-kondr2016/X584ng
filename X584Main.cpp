@@ -3,9 +3,10 @@
 #include <wx/validate.h>
 
 
-X584Main::X584Main(wxWindow *parent) : X584MainBase(parent), CPU(16)
+X584Main::X584Main(wxWindow *parent) : X584MainBase(parent),
+    CPU(16), OpFilter(0), ResFilter(-1)
 {
-    BuildTree(0, -1);
+    BuildTree(OpFilter, ResFilter);
 }
 
 X584Main::~X584Main()
@@ -127,5 +128,98 @@ void X584Main::BuildTree(int OpFilter, int ResFilter)
                 m_opcodeTree->SetItemImage(Node, 2, wxTreeItemIcon_Normal);
                 m_opcodeTree->SetItemImage(Node, 2, wxTreeItemIcon_Selected);
             }
+    }
+}
+
+void X584Main::FilterOpItemClick(wxCommandEvent &event)
+{
+    int filter;
+    int id = event.GetId();
+    switch (id) {
+    case ID_OP_REG:
+        filter = 1<<2;
+        break;
+    case ID_OP_WR:
+        filter = 1<<0;
+        break;
+    case ID_OP_XWR:
+        filter = 1<<1;
+        break;
+    case ID_OP_DI:
+        filter = 1<<3;
+        break;
+    case ID_OP_CI:
+        filter = 1<<5;
+        break;
+    default:
+        event.Skip();
+        return;
+    }
+
+    OpFilter ^= filter;
+
+    wxWindow *wnd;
+    wxButton *btn;
+
+    wnd = wxWindow::FindWindowById(id, this);
+    btn = dynamic_cast<wxButton *>(wnd);
+
+    wxFont font = btn->GetFont();
+    font.SetWeight(OpFilter&filter ? wxFontWeight::wxFONTWEIGHT_BOLD : wxFontWeight::wxFONTWEIGHT_MEDIUM);
+    btn->SetFont(font);
+    BuildTree(OpFilter, ResFilter);
+}
+
+void X584Main::FilterResItemClick(wxCommandEvent &event)
+{
+    int tag;
+    int id = event.GetId();
+    wxButton *btn = dynamic_cast<wxButton *>(wxWindow::FindWindowById(id, this));
+    
+    switch (id) {
+    case ID_RES_REG:
+        tag = 2;
+        break;
+    case ID_RES_WR:
+        tag = 0;
+        break;
+    case ID_RES_XWR:
+        tag = 1;
+        break;
+    case ID_RES_DO:
+        tag = 4;
+        break;
+    case ID_RES_WR_XWR:
+        tag = 6;
+        break;
+    default:
+        event.Skip();
+        return;
+    }
+
+    if (ResFilter == tag) {
+        ResFilter = -1;
+        
+        wxFont font = btn->GetFont();
+        font.SetWeight(wxFontWeight::wxFONTWEIGHT_MEDIUM);
+        btn->SetFont(font);
+        
+        BuildTree(OpFilter, ResFilter);
+        ResButton = nullptr;
+    } else {
+        if (ResButton) {
+            wxFont font = ResButton->GetFont();
+            font.SetWeight(wxFontWeight::wxFONTWEIGHT_MEDIUM);
+            ResButton->SetFont(font);
+        }
+
+        ResFilter = tag;
+        
+        wxFont font = btn->GetFont();
+        font.SetWeight(wxFontWeight::wxFONTWEIGHT_BOLD);
+        btn->SetFont(font);
+
+        BuildTree(OpFilter, ResFilter);
+        ResButton = btn;
     }
 }

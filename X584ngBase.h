@@ -44,7 +44,17 @@ class X584MainBase : public wxFrame
 	protected:
 		enum
 		{
-			ID_R0 = 6000,
+			ID_OP_REG = 6000,
+			ID_OP_WR,
+			ID_OP_XWR,
+			ID_OP_DI,
+			ID_OP_CI,
+			ID_RES_REG,
+			ID_RES_WR,
+			ID_RES_XWR,
+			ID_RES_DO,
+			ID_RES_WR_XWR,
+			ID_R0,
 			ID_R1,
 			ID_R2,
 			ID_R3,

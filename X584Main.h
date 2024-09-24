@@ -12,9 +12,13 @@ class X584Main : public X584MainBase
         virtual ~X584Main();
 
     protected:
+        void FilterOpItemClick(wxCommandEvent &event) override;
+        void FilterResItemClick(wxCommandEvent &event) override;
 
     private:
         K584 CPU;
+        int OpFilter, ResFilter;
+        wxButton *ResButton;
 
         void BuildTree(int OpFilter, int ResFilter);
         

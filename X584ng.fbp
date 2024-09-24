@@ -916,7 +916,7 @@
                           <property name="font"></property>
                           <property name="gripper">0</property>
                           <property name="hidden">0</property>
-                          <property name="id">wxID_ANY</property>
+                          <property name="id">ID_OP_REG</property>
                           <property name="label">РОН</property>
                           <property name="margins"></property>
                           <property name="markup">0</property>
@@ -991,7 +991,7 @@
                           <property name="font"></property>
                           <property name="gripper">0</property>
                           <property name="hidden">0</property>
-                          <property name="id">wxID_ANY</property>
+                          <property name="id">ID_OP_WR</property>
                           <property name="label">РР</property>
                           <property name="margins"></property>
                           <property name="markup">0</property>
@@ -1066,7 +1066,7 @@
                           <property name="font"></property>
                           <property name="gripper">0</property>
                           <property name="hidden">0</property>
-                          <property name="id">wxID_ANY</property>
+                          <property name="id">ID_OP_XWR</property>
                           <property name="label">РРР</property>
                           <property name="margins"></property>
                           <property name="markup">0</property>
@@ -1141,7 +1141,7 @@
                           <property name="font"></property>
                           <property name="gripper">0</property>
                           <property name="hidden">0</property>
-                          <property name="id">wxID_ANY</property>
+                          <property name="id">ID_OP_DI</property>
                           <property name="label">ШВх</property>
                           <property name="margins"></property>
                           <property name="markup">0</property>
@@ -1216,7 +1216,7 @@
                           <property name="font"></property>
                           <property name="gripper">0</property>
                           <property name="hidden">0</property>
-                          <property name="id">wxID_ANY</property>
+                          <property name="id">ID_OP_CI</property>
                           <property name="label">П</property>
                           <property name="margins"></property>
                           <property name="markup">0</property>
@@ -1291,7 +1291,7 @@
                           <property name="font"></property>
                           <property name="gripper">0</property>
                           <property name="hidden">0</property>
-                          <property name="id">wxID_ANY</property>
+                          <property name="id">ID_RES_REG</property>
                           <property name="label">РОН</property>
                           <property name="margins"></property>
                           <property name="markup">0</property>
@@ -1366,7 +1366,7 @@
                           <property name="font"></property>
                           <property name="gripper">0</property>
                           <property name="hidden">0</property>
-                          <property name="id">wxID_ANY</property>
+                          <property name="id">ID_RES_WR</property>
                           <property name="label">РР</property>
                           <property name="margins"></property>
                           <property name="markup">0</property>
@@ -1441,7 +1441,7 @@
                           <property name="font"></property>
                           <property name="gripper">0</property>
                           <property name="hidden">0</property>
-                          <property name="id">wxID_ANY</property>
+                          <property name="id">ID_RES_XWR</property>
                           <property name="label">РРР</property>
                           <property name="margins"></property>
                           <property name="markup">0</property>
@@ -1516,7 +1516,7 @@
                           <property name="font"></property>
                           <property name="gripper">0</property>
                           <property name="hidden">0</property>
-                          <property name="id">wxID_ANY</property>
+                          <property name="id">ID_RES_DO</property>
                           <property name="label">ШВых</property>
                           <property name="margins"></property>
                           <property name="markup">0</property>
@@ -1591,7 +1591,7 @@
                           <property name="font"></property>
                           <property name="gripper">0</property>
                           <property name="hidden">0</property>
-                          <property name="id">wxID_ANY</property>
+                          <property name="id">ID_RES_WR_XWR</property>
                           <property name="label">РР,РРР</property>
                           <property name="margins"></property>
                           <property name="markup">0</property>

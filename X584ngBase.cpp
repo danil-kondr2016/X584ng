@@ -275,34 +275,34 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 	fgSizer4->SetFlexibleDirection( wxBOTH );
 	fgSizer4->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
-	m_filterOpRegButton = new wxButton( sbSizer1->GetStaticBox(), wxID_ANY, wxT("РОН"), wxDefaultPosition, wxSize( 45,-1 ), 0 );
+	m_filterOpRegButton = new wxButton( sbSizer1->GetStaticBox(), ID_OP_REG, wxT("РОН"), wxDefaultPosition, wxSize( 45,-1 ), 0 );
 	fgSizer4->Add( m_filterOpRegButton, 0, wxALL, 5 );
 
-	m_filterOpWRButton = new wxButton( sbSizer1->GetStaticBox(), wxID_ANY, wxT("РР"), wxDefaultPosition, wxSize( 45,-1 ), 0 );
+	m_filterOpWRButton = new wxButton( sbSizer1->GetStaticBox(), ID_OP_WR, wxT("РР"), wxDefaultPosition, wxSize( 45,-1 ), 0 );
 	fgSizer4->Add( m_filterOpWRButton, 0, wxALL, 5 );
 
-	m_filterOpXWRButton = new wxButton( sbSizer1->GetStaticBox(), wxID_ANY, wxT("РРР"), wxDefaultPosition, wxSize( 50,-1 ), 0 );
+	m_filterOpXWRButton = new wxButton( sbSizer1->GetStaticBox(), ID_OP_XWR, wxT("РРР"), wxDefaultPosition, wxSize( 50,-1 ), 0 );
 	fgSizer4->Add( m_filterOpXWRButton, 0, wxALL, 5 );
 
-	m_filterOpInButton = new wxButton( sbSizer1->GetStaticBox(), wxID_ANY, wxT("ШВх"), wxDefaultPosition, wxSize( 50,-1 ), 0 );
+	m_filterOpInButton = new wxButton( sbSizer1->GetStaticBox(), ID_OP_DI, wxT("ШВх"), wxDefaultPosition, wxSize( 50,-1 ), 0 );
 	fgSizer4->Add( m_filterOpInButton, 0, wxALL, 5 );
 
-	m_filterOpCarryButton = new wxButton( sbSizer1->GetStaticBox(), wxID_ANY, wxT("П"), wxDefaultPosition, wxSize( 50,-1 ), 0 );
+	m_filterOpCarryButton = new wxButton( sbSizer1->GetStaticBox(), ID_OP_CI, wxT("П"), wxDefaultPosition, wxSize( 50,-1 ), 0 );
 	fgSizer4->Add( m_filterOpCarryButton, 0, wxALL, 5 );
 
-	m_filterResRegButton = new wxButton( sbSizer1->GetStaticBox(), wxID_ANY, wxT("РОН"), wxDefaultPosition, wxSize( 45,-1 ), 0 );
+	m_filterResRegButton = new wxButton( sbSizer1->GetStaticBox(), ID_RES_REG, wxT("РОН"), wxDefaultPosition, wxSize( 45,-1 ), 0 );
 	fgSizer4->Add( m_filterResRegButton, 0, wxALL, 5 );
 
-	m_filterResWRButton = new wxButton( sbSizer1->GetStaticBox(), wxID_ANY, wxT("РР"), wxDefaultPosition, wxSize( 45,-1 ), 0 );
+	m_filterResWRButton = new wxButton( sbSizer1->GetStaticBox(), ID_RES_WR, wxT("РР"), wxDefaultPosition, wxSize( 45,-1 ), 0 );
 	fgSizer4->Add( m_filterResWRButton, 0, wxALL, 5 );
 
-	m_filterResXWRButton = new wxButton( sbSizer1->GetStaticBox(), wxID_ANY, wxT("РРР"), wxDefaultPosition, wxSize( 50,-1 ), 0 );
+	m_filterResXWRButton = new wxButton( sbSizer1->GetStaticBox(), ID_RES_XWR, wxT("РРР"), wxDefaultPosition, wxSize( 50,-1 ), 0 );
 	fgSizer4->Add( m_filterResXWRButton, 0, wxALL, 5 );
 
-	m_filterResOutButton = new wxButton( sbSizer1->GetStaticBox(), wxID_ANY, wxT("ШВых"), wxDefaultPosition, wxSize( 50,-1 ), 0 );
+	m_filterResOutButton = new wxButton( sbSizer1->GetStaticBox(), ID_RES_DO, wxT("ШВых"), wxDefaultPosition, wxSize( 50,-1 ), 0 );
 	fgSizer4->Add( m_filterResOutButton, 0, wxALL, 5 );
 
-	m_filterResWRXWRButton = new wxButton( sbSizer1->GetStaticBox(), wxID_ANY, wxT("РР,РРР"), wxDefaultPosition, wxSize( 50,-1 ), 0 );
+	m_filterResWRXWRButton = new wxButton( sbSizer1->GetStaticBox(), ID_RES_WR_XWR, wxT("РР,РРР"), wxDefaultPosition, wxSize( 50,-1 ), 0 );
 	fgSizer4->Add( m_filterResWRXWRButton, 0, wxALL, 5 );
 
 
