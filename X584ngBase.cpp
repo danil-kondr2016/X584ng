@@ -318,7 +318,7 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 	wxStaticBoxSizer* sbSizer2;
 	sbSizer2 = new wxStaticBoxSizer( new wxStaticBox( m_panel2, wxID_ANY, wxT("Описание микрокоманды") ), wxVERTICAL );
 
-	m_commandDescription = new wxTextCtrl( sbSizer2->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE );
+	m_commandDescription = new wxTextCtrl( sbSizer2->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE|wxTE_NO_VSCROLL|wxTE_READONLY );
 	sbSizer2->Add( m_commandDescription, 1, wxALL|wxEXPAND, 5 );
 
 
@@ -590,6 +590,7 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 	this->Connect( m_toolReset->GetId(), wxEVT_COMMAND_TOOL_CLICKED, wxCommandEventHandler( X584MainBase::ResetItemClick ) );
 	this->Connect( m_toolHelp->GetId(), wxEVT_COMMAND_TOOL_CLICKED, wxCommandEventHandler( X584MainBase::HelpItemClick ) );
 	this->Connect( m_toolAbout->GetId(), wxEVT_COMMAND_TOOL_CLICKED, wxCommandEventHandler( X584MainBase::AboutItemClick ) );
+	m_opcodeTree->Connect( wxEVT_COMMAND_TREE_SEL_CHANGED, wxTreeEventHandler( X584MainBase::CodeTreeOnSelChanged ), NULL, this );
 	m_filterOpRegButton->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( X584MainBase::FilterOpItemClick ), NULL, this );
 	m_filterOpWRButton->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( X584MainBase::FilterOpItemClick ), NULL, this );
 	m_filterOpXWRButton->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( X584MainBase::FilterOpItemClick ), NULL, this );
@@ -600,6 +601,25 @@ X584MainBase::X584MainBase( wxWindow* parent, wxWindowID id, const wxString& tit
 	m_filterResXWRButton->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( X584MainBase::FilterResItemClick ), NULL, this );
 	m_filterResOutButton->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( X584MainBase::FilterResItemClick ), NULL, this );
 	m_filterResWRXWRButton->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( X584MainBase::FilterResItemClick ), NULL, this );
+	m_commandDescription->Connect( wxEVT_LEFT_DOWN, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_LEFT_UP, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_MIDDLE_DOWN, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_MIDDLE_UP, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_RIGHT_DOWN, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_RIGHT_UP, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_AUX1_DOWN, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_AUX1_UP, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_AUX2_DOWN, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_AUX1_UP, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_MOTION, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_LEFT_DCLICK, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_MIDDLE_DCLICK, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_RIGHT_DCLICK, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_AUX1_DCLICK, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_AUX2_DCLICK, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_LEAVE_WINDOW, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_ENTER_WINDOW, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
+	m_commandDescription->Connect( wxEVT_MOUSEWHEEL, wxMouseEventHandler( X584MainBase::OnCommandDescriptionMouseEvents ), NULL, this );
 	m_fieldR0->Connect( wxEVT_KEY_DOWN, wxKeyEventHandler( X584MainBase::RegMaskEditKeyPress ), NULL, this );
 	m_fieldR0->Connect( wxEVT_LEFT_DCLICK, wxMouseEventHandler( X584MainBase::RegMaskEditDblClick ), NULL, this );
 	m_fieldR0->Connect( wxEVT_COMMAND_TEXT_UPDATED, wxCommandEventHandler( X584MainBase::RegMaskEditChange ), NULL, this );

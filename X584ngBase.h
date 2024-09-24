@@ -189,8 +189,10 @@ class X584MainBase : public wxFrame
 		virtual void HelpItemClick( wxCommandEvent& event ) { event.Skip(); }
 		virtual void AboutItemClick( wxCommandEvent& event ) { event.Skip(); }
 		virtual void StopItemClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void CodeTreeOnSelChanged( wxTreeEvent& event ) { event.Skip(); }
 		virtual void FilterOpItemClick( wxCommandEvent& event ) { event.Skip(); }
 		virtual void FilterResItemClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnCommandDescriptionMouseEvents( wxMouseEvent& event ) { event.Skip(); }
 		virtual void RegMaskEditKeyPress( wxKeyEvent& event ) { event.Skip(); }
 		virtual void RegMaskEditDblClick( wxMouseEvent& event ) { event.Skip(); }
 		virtual void RegMaskEditChange( wxCommandEvent& event ) { event.Skip(); }

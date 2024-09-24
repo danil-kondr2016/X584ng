@@ -14,6 +14,11 @@ class X584Main : public X584MainBase
     protected:
         void FilterOpItemClick(wxCommandEvent &event) override;
         void FilterResItemClick(wxCommandEvent &event) override;
+        void CodeTreeOnSelChanged(wxTreeEvent &event) override;
+        void OnCommandDescriptionMouseEvents(wxMouseEvent &event) override { 
+            SetCursor(wxCURSOR_ARROW);
+            event.Skip(false); 
+        }
 
     private:
         K584 CPU;

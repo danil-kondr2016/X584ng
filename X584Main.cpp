@@ -34,7 +34,6 @@ void X584Main::BuildTree(int OpFilter, int ResFilter)
     m_opcodeTree->DeleteAllItems();
 
     wxTreeItemId Root = m_opcodeTree->AddRoot("Root");
-    m_opcodeTree->SetItemData(Root, new X584CodeTreeOpCode(NOP));
     for (int i = 0; i < INSTR_COUNT; i++) {
         //фильтруем по результату операции
         if (ResFilter != -1 && iSet[i].Result != ResFilter)
@@ -222,4 +221,46 @@ void X584Main::FilterResItemClick(wxCommandEvent &event)
         BuildTree(OpFilter, ResFilter);
         ResButton = btn;
     }
+}
+
+void X584Main::CodeTreeOnSelChanged(wxTreeEvent &event)
+{
+    event.Skip();
+    
+    // получаем код микроинструкции
+    wxTreeItemId Item = event.GetItem();
+    wxTreeItemData *Data = m_opcodeTree->GetItemData(Item);
+    X584CodeTreeOpCode *Opcode = dynamic_cast<X584CodeTreeOpCode *>(Data);
+    // выводим код микроинструкции
+    unsigned val = Opcode->opcode & ~ATTR_CUSED;
+
+    m_commandDescription->Clear();    
+    if (!m_opcodeTree->GetLastChild(Item).IsOk()) {
+        wxString MicroInstruction(L"Код микроинструкции: ");
+        for (int i = 8; i >= 0; i--)
+            MicroInstruction += val & 1<<i ? '1' : '0';
+        m_commandDescription->AppendText(MicroInstruction);
+        m_commandDescription->AppendText("\n");
+    }
+    // получаем элемент верхнего уровня
+    wxTreeItemId TrueRoot = m_opcodeTree->GetRootItem();
+    wxTreeItemId Root = Item;
+    while (Root.IsOk() && m_opcodeTree->GetItemParent(Root) != TrueRoot)
+        Root = m_opcodeTree->GetItemParent(Root);
+    if (!Root.IsOk()) {
+        m_commandDescription->Clear();
+        return;
+    }
+    Data = m_opcodeTree->GetItemData(Root);
+    Opcode = dynamic_cast<X584CodeTreeOpCode *>(Data);
+    val = Opcode->opcode & ~ATTR_CUSED;
+    // ищем сопоставленный раздел справки
+    for (int i = 0; i < INSTR_COUNT; i++) {
+        if (val == iSet[i].BitValue) {
+            m_commandDescription->AppendText(wxString::FromUTF8(iSet[i].Help));
+            return;
+        }
+    }
+
+    m_commandDescription->AppendText(wxString(L"Информация по текущей микроинструкции"));    
 }
